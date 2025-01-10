@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".FoodListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/backbtnlist"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:background="@color/white"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            android:contentDescription="backbtn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="List of "
+            android:layout_marginLeft="65dp"
+            android:textSize="25sp"
+            android:fontFamily="@font/merriweathersans_semibold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="items"
+            android:textColor="@color/LightGreen"
+            android:textSize="25sp"
+            android:fontFamily="@font/merriweathersans_semibold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie2"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            app:lottie_autoPlay="true"
+            android:layout_marginBottom="8dp"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/pan"/>
+
+
+    </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:gravity="center"
+
+      >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Orchid"
+        android:text="Category   "
+        android:id="@+id/categoryclick"
+        android:textSize="18sp"
+        android:fontFamily="@font/merriweathersans_regular"
+        />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/brack1"
+          android:text="("
+          android:textSize="18sp"
+          android:textColor="@color/Orchid"
+          android:fontFamily="@font/merriweathersans_regular"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/dietclick"
+      android:text="ALL"
+      android:textSize="18sp"
+      android:textColor="@color/LightGreen"
+      android:fontFamily="@font/merriweathersans_regular"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/brack2"
+          android:text=")"
+          android:textSize="18sp"
+          android:textColor="@color/Orchid"
+          android:fontFamily="@font/merriweathersans_regular"/>
+
+  </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/foodrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_food" />
+
+</LinearLayout>

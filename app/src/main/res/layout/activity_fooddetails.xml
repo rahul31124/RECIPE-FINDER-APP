@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/motionLayout"
+    tools:context=".FoodDetailsActivity"
+    app:layoutDescription="@xml/activity_fooddetails_scene">
+
+    <ImageView
+        android:id="@+id/itemdetailsimg"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza" />
+
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:padding="4dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/backb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemdetailsimg"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_new_24" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-11dp"
+        android:background="@drawable/foodetails"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemdetailsimg">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:id="@+id/foodName"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="45dp"
+            android:fontFamily="@font/merriweathersans_semibold"
+            android:text="Food Name"
+            android:textColor="@color/Black"
+            android:textSize="20sp" />
+
+        <com.google.android.material.button.MaterialButton
+
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:id="@+id/ingredients"
+            android:background="@drawable/buttonss"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/foodName"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="34dp"
+            android:fontFamily="@font/merriweathersans_semibold"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            style="@style/GreenButton"
+            android:text="Ingredients"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/ingredients"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:id="@+id/setext"
+            android:text="Set Text"
+            android:textSize="18sp"
+            android:fontFamily="@font/merriweathersans_bold"
+            android:textColor="@color/LightGreen"
+            />
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/ingredients"
+            android:layout_alignParentStart="true"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/displayitems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/Black"
+                android:fontFamily="@font/merriweathersans_regular"
+                />
+
+
+
+
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recipeDetails"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_below="@id/foodName"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="34dp"
+            android:background="@drawable/buttonss"
+            android:fontFamily="@font/merriweathersans_semibold"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Recipe Details"
+            style="@style/GreenButton"
+            />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/arrowup"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/baseline_keyboard_arrow_up_24"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout"
+        android:contentDescription="gugyugij"
+
+        />
+</androidx.constraintlayout.motion.widget.MotionLayout>
